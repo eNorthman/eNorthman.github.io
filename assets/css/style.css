@@ -362,6 +362,10 @@ a:focus {
 ################################################################# */
 /* General Tweaks */
 
+.logo img {
+	height: 70px;
+}
+
 #blue {
 	background: #00b3fe;
 	margin-top: 60px;
