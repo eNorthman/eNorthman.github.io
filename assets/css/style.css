@@ -205,8 +205,8 @@ a:focus {
 ################################################################# */
 
 #headerwrap {
-	background-color: #00b3fe;
-	min-height: 380px;
+	background-color: #0D223C;
+	min-height: 236px;
 	padding-top: 100px;
 	padding-bottom: 0px;
 	text-align: center;
@@ -222,8 +222,13 @@ a:focus {
 	margin-bottom: 25px;
 }
 
+#headerwrap h1:hover {
+	color: #00b3fe;
+}
+
 #headerwrap .img-responsive {
 	margin: 0 auto;
+	height: 160px;
 }
 
 /* Services Wrap */
@@ -363,7 +368,7 @@ a:focus {
 /* General Tweaks */
 
 .logo img {
-	height: 70px;
+	height: 160px;
 }
 
 #blue {
