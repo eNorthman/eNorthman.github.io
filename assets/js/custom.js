@@ -10,3 +10,9 @@
 
 		
 })(jQuery);
+
+$('.navbar').affix({
+    offset: {
+        top: $('.navbar').offset().top
+    }
+});
