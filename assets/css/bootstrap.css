@@ -3672,6 +3672,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     width: auto;
     border-top: 0;
     box-shadow: none;
+    text-align: center;
   }
   .navbar-collapse.collapse {
     display: block !important;
@@ -3815,7 +3816,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar-nav {
-    float: left;
+    float: none;
+    display: inline-block;
     margin: 7px;
   }
   .navbar-nav > li {
