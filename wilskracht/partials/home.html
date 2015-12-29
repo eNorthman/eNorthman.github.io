@@ -1,0 +1,28 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="container-slider hidden-xs">
+            <img ng-repeat="slide in slides" class="slide" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+            <nav class="nav">
+                <div class="wrapper">
+                    <ul class="dots">
+                        <li class="dot" ng-repeat="slide in slides">
+                            <a href ng-class="{'active':isCurrentSlideIndex($index)}" ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+         <div class="col-md-8 welcome-container">
+            <h3>Welkom</h3>
+            <p>Ik heb gemerkt dat er steeds meer kinderen zijn die moeilijk tot leren komen, zich niet prettig voelen, behoefte hebben aan wat meer aandacht. Over het algemeen is de leerkracht goed in staat om die extra aandacht te bieden. Alleen is het in de dagelijkse drukte in een klas niet makkelijk om regelmatig tijd vrij te maken om een gesprekje te voeren met een kind. Er zijn immers veel kinderen die dat extra stukje aandacht nodig hebben. Soms probeer ik dan, in overleg met de leerkracht en de ouders, een paar keer met het kind te praten. Vaak kom ik er dan achter dat het kind het heerlijk vindt om even, ongestoord, alleen met een juf te praten. En dan komen we samen met hele praktische, soms kleine, aanpassingen voor het kind waardoor het leren in de klas net weer wat beter gaat. Of het kind is blij dat het heeft kunnen praten over wat hem/haar dwarszit of bezig houdt waardoor het weer verder kan! Ik heb gemerkt dat ik dit soort ondersteunende helpende gesprekjes met kinderen erg zinvol vind en ik ga het steeds leuker vinden om op deze manier kinderen te begeleiden! Daarom ben ik de basistraining Kindercoaching gaan doen. Deze heb ik met veel plezier en interesse gevolgd. Ik heb hem inmiddels afgerond, maar heb me ingeschreven voor de vervolgopleiding in 2012. Met mijn opgedane kennis en ervaring wil ik me graag inzetten (naast mijn werk als intern begeleider en leerkracht) als kindercoach. Ik hoop kinderen te helpen om hun eigen kwaliteiten te ontdekken en in te zetten in het dagelijks leven zodat er een positieve verandering plaatsvindt!</p>
+        </div>
+        <div class="col-md-4 news-container">
+            <h3>Over ons:</h3>
+            <ul class="list-unstyled">
+                    <!-- <pre>{{news | json}}</pre> -->
+                <li ng-repeat="new in news">                   
+                    <p><strong>{{new.title}}</strong></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

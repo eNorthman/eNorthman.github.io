@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <link rel="shortcut icon" href="ico/favicon.ico">
+
+    <!-- <title>Wilskracht</title> -->
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/test.css" rel="stylesheet">
+  </head>
+
+  <body>
+      <!-- *****************************************************************************************************************
+   HEADERWRAP
+   ***************************************************************************************************************** -->
+  <div class="container">
+    <div class="row">
+      <navigation-tabs></navigation-tabs>
+  </div> 
+  <div ng-view class="row">
+  </div>
+  </div><!-- /headerwrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+  </body>
+</html>
