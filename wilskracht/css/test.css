@@ -1,4 +1,5 @@
 .navbar {
+    z-index: 99;
 	background-color: #6599FF;
 	border: 1px;
     margin-top: 30px;
