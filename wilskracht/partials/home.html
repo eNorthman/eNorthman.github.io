@@ -1,7 +1,9 @@
 <div class="jumbotron">
     <div class="container">
         <div class="container-slider hidden-xs">
-            <img ng-repeat="slide in slides" class="slide" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+            <div class="slide" ng-repeat="slide in slides" ng-hide="!isCurrentSlideIndex($index)">
+                <img ng-src="{{slide.image}}" />
+            </div>
             <nav class="nav">
                 <div class="wrapper">
                     <ul class="dots">

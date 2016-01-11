@@ -1,28 +1,12 @@
 'use strict';
 
 var app = angular.module('controllers', ['ngAnimate']);
-
-// app.controller('TabController', function(){
-// 	this.isCollapsed = true;
-// 	this.tab = 1;
-
-// 	this.setTab = function(value){
-// 		this.tab = value;
-// 	};
-
-// 	this.isSet = function(tabValue){
-// 		return this.tab === tabValue;
-// 	}
-
-// });
-
 // create the controller and inject Angular's $scope
 
 var news = [{
     title: 'beunhaas',
     text: 'hallo ik ben een beunhaas'
-},
-{
+}, {
     title: 'beunhaas',
     text: 'hallo ik ben een beunhaas'
 }];
@@ -31,33 +15,35 @@ app.controller('mainController', function($scope, $interval) {
     $scope.message = 'Everyone come and see how good I look!';
 
     $scope.slides = [{
-        image: 'http://lorempixel.com/1000/400/',
+        image: 'http://lorempixel.com/1000/300/food',
         description: 'abcdef'
     }, {
-        image: 'http://lorempixel.com/1000/400/food',
+        image: 'http://lorempixel.com/1000/300/food',
         description: 'abcdef'
     }, {
-        image: 'http://lorempixel.com/1000/400/sports',
+        image: 'http://lorempixel.com/1000/300/sports',
         description: 'abcdef'
     }, {
-        image: 'http://lorempixel.com/1000/400/people',
+        image: 'http://lorempixel.com/1000/300/people',
         description: 'abcdef'
     }];
 
- 	$scope.callAtInterval = function() {
+    $scope.callAtInterval = function() {
         console.log("$scope.callAtInterval - Interval occurred");
-        if($scope.currentIndex < $scope.slides.length-1) {
-        	$scope.currentIndex = $scope.currentIndex +1;
-        } else{
-        	$scope.currentIndex = 0;
+        if ($scope.currentIndex < $scope.slides.length - 1) {
+            $scope.currentIndex = $scope.currentIndex + 1;
+        } else {
+            $scope.currentIndex = 0;
         }
     }
 
     var interval;
-    $scope.start = function () {
+    $scope.start = function() {
         $interval.cancel(interval);
 
-        interval = $interval( function(){ $scope.callAtInterval(); }, 5000);
+        interval = $interval(function() {
+            $scope.callAtInterval();
+        }, 5000);
     }
     $scope.start();
     $scope.currentIndex = 0;
@@ -69,6 +55,6 @@ app.controller('mainController', function($scope, $interval) {
     $scope.isCurrentSlideIndex = function(index) {
         return $scope.currentIndex === index;
     };
-    
+
     $scope.news = news;
 });
