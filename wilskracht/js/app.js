@@ -21,6 +21,11 @@ app.config(['$routeProvider',
         controller: 'aboutController',
         activetab: 'about'
       }).
+      when('/werkwijze', {
+        templateUrl: 'partials/werkwijze.html',
+        controller: 'mainController',
+        activetab: 'werkwijze'
+      }).
       when('/contact', {
         templateUrl: 'partials/contact.html',
         controller: 'contactController',
