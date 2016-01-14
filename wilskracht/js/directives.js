@@ -6,9 +6,9 @@ app.directive('navigationTabs', function(){
 	return {
 		restrict: 'E',
 		templateUrl: 'partials/navigation.html',
-		controller:function(){
+		controller:function($scope, $route){
 			this.isCollapsed = true;
-			this.tab = 1;
+			this.tab = $route.current.activetab;
 
 			this.setTab = function(value){
 				this.tab = value;

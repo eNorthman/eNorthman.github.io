@@ -94,12 +94,12 @@ body{
     position: absolute;
     top: 2px;
     left: 2px;
-    width: 6px;
-    height: 6px;
+    width: 11px;
+    height: 11px;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background: #BBB;
+    background: #FFF;
     border: 1px solid transparent;
     outline: none;
     -webkit-box-shadow: none;
@@ -114,8 +114,8 @@ body{
 }
 
 .dots .dot a.active {
-    border-color: #FF9900;
-    background-color: transparent;
+    background: #6599FF;
+    border: 1px solid transparent;
 }
 
 .news-container, .welcome-container{

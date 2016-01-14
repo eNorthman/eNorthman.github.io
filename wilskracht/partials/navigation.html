@@ -22,23 +22,23 @@
               <span class="icon-bar"></span>
             </button>
           </div>
+            <!-- <pre>{{tab.isCollapsed}}</pre> -->
           <div class="navbar-collapse" ng-class="{collapse: tab.isCollapsed}">
-            <!-- <pre>{{tab}}</pre> -->
             <ul class="nav navbar-nav" ng-click="tab.isCollapsed = !tab.isCollapsed">
-              <li ng-class="{'active' : tab.isSet(1)}">
-                <a href="#home" ng-click="tab.setTab(1)">Home</a>
+              <li ng-class="{'active' : tab.isSet('home')}">
+                <a href="#home" ng-click="tab.setTab('home')">Home</a>
               </li>
-              <li ng-class="{'active' : tab.isSet(2) }">
-                <a href="#about" ng-click="tab.setTab(2)">over wilskracht</a>
+              <li ng-class="{'active' : tab.isSet('about')}">
+                <a href="#about" ng-click="tab.setTab('about')">over doorWilskracht</a>
               </li>
-              <li ng-class="{'active' : tab.isSet(3) }">
-                <a href ng-click="tab.setTab(3)">werkwijze</a>
+              <li ng-class="{'active' : tab.isSet('')}">
+                <a href>werkwijze</a>
               </li>
-              <li ng-class="{'active' : tab.isSet(4) }">
+              <li ng-class="{'active' : tab.isSet('')}">
                 <a href ng-click="tab.setTab(4)">tarieven en prijzen</a>
               </li>
-              <li ng-class="{'active' : tab.isSet(5) }">
-                <a href ng-click="tab.setTab(5)">contact</a>
+              <li ng-class="{'active' : tab.isSet('contact')}">
+                <a href="#contact" ng-click="tab.setTab('contact')">contact</a>
               </li>
             </ul>
           </div>

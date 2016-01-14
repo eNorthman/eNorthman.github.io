@@ -13,11 +13,18 @@ app.config(['$routeProvider',
     $routeProvider.
       when('/home', {
         templateUrl: 'partials/home.html',
-        controller: 'mainController'
+        controller: 'mainController',
+        activetab: 'home'
       }).
       when('/about', {
         templateUrl: 'partials/about.html',
-        controller: 'mainController'
+        controller: 'aboutController',
+        activetab: 'about'
+      }).
+      when('/contact', {
+        templateUrl: 'partials/contact.html',
+        controller: 'contactController',
+        activetab: 'contact'
       }).
       otherwise({
         redirectTo: '/home'

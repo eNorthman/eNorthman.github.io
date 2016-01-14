@@ -1,0 +1,31 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="col-md-8 welcome-container">
+            <div>
+            <h3>Neem hier contact met ons op</h3>
+            <p>Indien u vragen heeft over kindercoaching, vragen wij u het onderstaande formulier te gebruiken.</p>
+                <form name="submitform" ng-submit="submitForm(submitform.$valid)" novalidate>
+                    <!-- NAME -->
+                    <div class="form-group" ng-class="{ 'has-error' : submitform.name.$invalid && submitted}">
+                        <label for="name">Uw Naam:</label>
+                        <input type="text" name="name" class="form-control" id="name" ng-model="user.name" required>
+                        <p ng-show="submitform.name.$invalid && submitted" class="help-block">Het invullen van uw naam is verplicht</p>
+                    </div>
+                    <!-- EMAIL -->
+                    <div class="form-group" ng-class="{ 'has-error' : submitform.email.$invalid && submitted}">
+                        <label for="email">Uw Email:</label>
+                        <input type="email" name="email" class="form-control" id="email" ng-model="email" required>
+                        <p ng-show="submitform.email.$invalid && submitted" class="help-block">Vul aub een geldig email adres in</p>
+                    </div>
+                    <!-- Text -->
+                    <div class="form-group" ng-class="{ 'has-error' : submitform.email.$invalid && submitted}">
+                      <label for="comment">Uw tekst:</label>
+                      <textarea class="form-control" rows="5" name="comment" id="comment" ng-model="comment" required></textarea>
+                        <p ng-show="submitform.comment.$invalid && submitted" class="help-block">Vul aub een tekst in</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Verzenden</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

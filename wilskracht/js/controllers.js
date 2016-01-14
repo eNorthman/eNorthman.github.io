@@ -15,7 +15,7 @@ app.controller('mainController', function($scope, $interval) {
     $scope.message = 'Everyone come and see how good I look!';
 
     $scope.slides = [{
-        image: 'http://lorempixel.com/1000/300/food',
+        image: 'http://lorempixel.com/1000/300/sports',
         description: 'abcdef'
     }, {
         image: 'http://lorempixel.com/1000/300/food',
@@ -57,4 +57,14 @@ app.controller('mainController', function($scope, $interval) {
     };
 
     $scope.news = news;
+
+});
+
+app.controller('contactController', function($scope) {
+    $scope.submitForm = function(isValid) {
+        $scope.submitted = true;
+        if (isValid) {
+            alert('our form is amazing');
+        }
+    }
 });
