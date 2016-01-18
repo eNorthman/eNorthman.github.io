@@ -1,9 +1,9 @@
 <div class="jumbotron">
     <div class="container">
-        <div class="col-md-8 welcome-container">
+        <div class="col-md-7 welcome-container">
             <div>
-            <h3>Neem hier contact met ons op</h3>
-            <p>Indien u vragen heeft over kindercoaching, vragen wij u het onderstaande formulier te gebruiken.</p>
+                <h3>Neem hier contact met ons op</h3>
+                <p>Indien u vragen heeft over kindercoaching, vragen wij u het onderstaande formulier te gebruiken.</p>
                 <form name="submitform" ng-submit="submitForm(submitform.$valid)" novalidate>
                     <!-- NAME -->
                     <div class="form-group" ng-class="{ 'has-error' : submitform.name.$invalid && submitted}">
@@ -19,13 +19,24 @@
                     </div>
                     <!-- Text -->
                     <div class="form-group" ng-class="{ 'has-error' : submitform.email.$invalid && submitted}">
-                      <label for="comment">Uw tekst:</label>
-                      <textarea class="form-control" rows="5" name="comment" id="comment" ng-model="comment" required></textarea>
+                        <label for="comment">Uw tekst:</label>
+                        <textarea class="form-control" rows="5" name="comment" id="comment" ng-model="comment" required></textarea>
                         <p ng-show="submitform.comment.$invalid && submitted" class="help-block">Vul aub een tekst in</p>
                     </div>
                     <button type="submit" class="btn btn-primary">Verzenden</button>
                 </form>
             </div>
+        </div>
+        <div class="col-md-5 contact-container">
+            <h3>Contact Gegevens</h3>
+            <div id="sidebar_map"></div>
+            <ul class="contactList">
+                <li><p><strong>Adres</strong>Testadres</p></li>
+                <li><p><strong></strong>1234 AA</p></li>
+                <li><p><strong></strong>Testadres</p></li>
+                <li><p><strong>Email</strong>Email@Email.nl</p></li>
+                <li><p><strong>Telefoon</strong>0612345678</p></li>
+            </ul>
         </div>
     </div>
 </div>
