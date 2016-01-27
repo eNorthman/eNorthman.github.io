@@ -141,11 +141,12 @@ body {
     padding-left: 0;
     margin-left: 0;
     list-style: none;
+    margin-top: 3px;
 }
 
 .contactList strong {
     display: inline-block;
-    width: 50%;
+    width: 30%;
 }
 
 #sidebar_map {
