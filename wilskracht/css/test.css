@@ -131,7 +131,8 @@ body {
 }
 
 .welcome-container p,
-.news-container, .contact-container p {
+.news-container,
+.contact-container p {
     color: #878787;
     line-height: 22px;
     font-size: 15px;
@@ -172,4 +173,19 @@ body {
 .slide.ng-hide-remove.ng-hide-remove-active {
     opacity: 1;
     left: 0;
+}
+
+#footerwrap {
+    margin-top: -15px;
+}
+
+#footerwrap >ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footerwrap >ul >li {
+    display: inline-block;
+    margin-left: 15px;
 }

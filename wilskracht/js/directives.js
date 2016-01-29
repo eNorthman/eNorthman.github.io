@@ -22,6 +22,13 @@ app.directive('navigationTabs', function() {
     }
 });
 
+app.directive('footerTabs', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'partials/footer.html'
+    }
+});
+
 app.directive('myMap', function() {
     var link = function($scope, element, attrs) {
         var map, marker;
