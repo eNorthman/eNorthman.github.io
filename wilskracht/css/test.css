@@ -189,3 +189,7 @@ body {
     display: inline-block;
     margin-left: 15px;
 }
+
+#footerwrap >ul > li > a {
+    color: #333333;
+}
