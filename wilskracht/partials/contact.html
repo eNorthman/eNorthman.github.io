@@ -4,7 +4,7 @@
             <div>
                 <h3>Neem hier contact met ons op</h3>
                 <p>Indien u vragen heeft over kindercoaching, vragen wij u het onderstaande formulier te gebruiken.</p>
-                <form name="submitform" ng-submit="submitForm(submitform.$valid)" novalidate>
+                <form action="mail.php" method="post" name="submitform" ng-submit="submitForm(submitform.$valid)" novalidate>
                     <!-- NAME -->
                     <div class="form-group" ng-class="{ 'has-error' : submitform.name.$invalid && submitted}">
                         <label for="name">Uw Naam:</label>
@@ -23,7 +23,7 @@
                         <textarea class="form-control" rows="5" name="comment" id="comment" ng-model="comment" required></textarea>
                         <p ng-show="submitform.comment.$invalid && submitted" class="help-block">Vul aub een tekst in</p>
                     </div>
-                    <button type="submit" class="btn btn-primary">Verzenden</button>
+                    <button type="submit" value="Send" class="btn btn-primary">Verzenden</button>
                 </form>
             </div>
         </div>
