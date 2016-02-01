@@ -8,8 +8,11 @@ $data = array();        // array to pass back data
 if (empty($_POST['name']))
   $errors['name'] = 'Name is required.';
 
-if (empty($_POST['superheroAlias']))
-  $errors['superheroAlias'] = 'Superhero alias is required.';
+if (empty($_POST['email']))
+  $errors['email'] = 'email is required.';
+
+if (empty($_POST['comment']))
+  $errors['comment'] = 'comment is required.';
 
 // return a response ==============
 
@@ -23,7 +26,19 @@ if ( ! empty($errors)) {
 
   // if there are no errors, return a message
   $data['success'] = true;
-  $data['message'] = 'Success!';
+  $data['messageSuccess'] = 'Success!';
+
+  $name = $_POST['name']; // required
+  $email_from = $_POST['email']; // required
+  $message = $_POST['comment']; // required
+  $email_message = "Form details below.nn";
+  $email_message .= "Name: ".$name."n";
+  $email_message .= "Email: ".$email_from."n";
+  $email_message .= "Message: ".$message."n";
+  $headers = 'From: '.$email_from."rn".
+  'Reply-To: '.$email_from."rn" .
+  'X-Mailer: PHP/' . phpversion();
+  @mail($email_to, $email_subject, $email_message, $headers);
 }
 
 // return all our data to an AJAX call

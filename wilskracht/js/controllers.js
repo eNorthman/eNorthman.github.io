@@ -60,11 +60,32 @@ app.controller('mainController', function($scope, $interval) {
 
 });
 
-app.controller('contactController', function($scope) {
+app.controller('contactController', function($scope, $http) {
+    $scope.formData = {};
     $scope.submitForm = function(isValid) {
         $scope.submitted = true;
         if (isValid) {
-            alert('our form is amazing');
+            $http({
+                method: 'POST',
+                url: 'partials/mail.php',
+                data: $.param($scope.formData),
+                headers: {
+                   'Content-Type': 'application/x-www-form-urlencoded' 
+                }
+            }).success(function(data) {
+                console.log(data);
+                debugger;
+                if (!data.success) {
+                    $scope.errorName = data.errors.name;
+                    $scope.submissionMessage = data.messageError;
+                    $scope.submission = true; //shows the success message
+                } else {
+                    $scope.submissionMessage = data.messageSuccess;
+                     $scope.formData = {}; // form fields are emptied with this line
+                    $scope.submission = true; //shows the success message
+                    $scope.submitted = false;
+                }
+            })
         }
     }
 });
