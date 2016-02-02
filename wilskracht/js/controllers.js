@@ -73,8 +73,6 @@ app.controller('contactController', function($scope, $http) {
                    'Content-Type': 'application/x-www-form-urlencoded' 
                 }
             }).success(function(data) {
-                console.log(data);
-                debugger;
                 if (!data.success) {
                     $scope.errorName = data.errors.name;
                     $scope.submissionMessage = data.messageError;
