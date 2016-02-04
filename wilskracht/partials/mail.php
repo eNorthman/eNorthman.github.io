@@ -27,7 +27,8 @@ if ( ! empty($errors)) {
   // if there are no errors, return a message
   $data['success'] = true;
   $data['messageSuccess'] = 'Success!';
-
+  $email_subject = 'wilskracht';
+  $email_to = 'eric_vd_helm@hotmail.com';
   $name = $_POST['name']; // required
   $email_from = $_POST['email']; // required
   $message = $_POST['comment']; // required

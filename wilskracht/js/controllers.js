@@ -73,13 +73,14 @@ app.controller('contactController', function($scope, $http) {
                    'Content-Type': 'application/x-www-form-urlencoded' 
                 }
             }).success(function(data) {
+                console.log(data);
                 if (!data.success) {
                     $scope.errorName = data.errors.name;
                     $scope.submissionMessage = data.messageError;
                     $scope.submission = true; //shows the success message
                 } else {
                     $scope.submissionMessage = data.messageSuccess;
-                     $scope.formData = {}; // form fields are emptied with this line
+                    $scope.formData = {}; // form fields are emptied with this line
                     $scope.submission = true; //shows the success message
                     $scope.submitted = false;
                 }
