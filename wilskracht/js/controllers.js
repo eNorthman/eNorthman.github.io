@@ -16,16 +16,16 @@ app.controller('mainController', function($scope, $interval) {
 
     $scope.slides = [{
         image: 'http://lorempixel.com/1000/300/sports',
-        description: 'abcdef'
+        description: 'Wij zijn de beste'
     }, {
         image: 'http://lorempixel.com/1000/300/food',
-        description: 'abcdef'
+        description: 'Kinderen weer kind'
     }, {
         image: 'http://lorempixel.com/1000/300/sports',
-        description: 'abcdef'
+        description: 'problem solved'
     }, {
         image: 'http://lorempixel.com/1000/300/people',
-        description: 'abcdef'
+        description: 'waaaaauwww'
     }];
 
     $scope.callAtInterval = function() {

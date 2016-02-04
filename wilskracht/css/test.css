@@ -69,6 +69,17 @@ body {
     box-shadow: 0px 0px 15px #999;
 }
 
+.description {
+    position: absolute;
+    left: 20px;
+    bottom: 60px;
+    background: #6599FF;
+    opacity: 0.6;
+    padding: 15px;
+    font-size: 28px;
+    color: #fff;
+}
+
 .nav .dot,
 .nav .dot a {
     display: inline-block;
