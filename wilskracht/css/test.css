@@ -204,3 +204,6 @@ body {
 #footerwrap >ul > li > a {
     color: #333333;
 }
+.img-center-bottom {
+    margin: 0 auto;
+}
