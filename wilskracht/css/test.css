@@ -142,7 +142,7 @@ body {
 }
 
 .welcome-container p,
-.news-container,
+.news-container p,
 .contact-container p {
     color: #878787;
     line-height: 22px;
