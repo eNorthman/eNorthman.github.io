@@ -2,7 +2,16 @@
 
 var app = angular.module('directives', ['controllers']);
 
-app.directive('navigationTabs', function() {
+app.directive('navigationTabs', function($window) {
+    var link = function($scope, $element, $attrs){            
+        angular.element($window).bind("scroll", function (){
+            if (this.pageYOffset >= 150) {
+                $('.navbar').addClass("navbar-xs");
+            } else {
+                $('.navbar').removeClass("navbar-xs");
+            }         
+        });
+    }
     return {
         restrict: 'E',
         templateUrl: 'partials/navigation.html',
@@ -16,8 +25,9 @@ app.directive('navigationTabs', function() {
 
             this.isSet = function(tabValue) {
                 return this.tab === tabValue;
-            }
+            };
         },
+        link: link,
         controllerAs: 'tab'
     }
 });
