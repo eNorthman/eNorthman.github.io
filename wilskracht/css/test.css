@@ -6,11 +6,14 @@
     margin-right: -3px;
     border-color: black;
 }
+.navbar-default .navbar-toggle:hover {
+    background-color: #FFDE87;
+}
 @media (max-width: 768px) {
     .navbar-xs {
         position: fixed;
         top: 0px;
-        right: 0px;
+        right: 3px;
         width: 100%;
         margin-top: 0px !important;
     }

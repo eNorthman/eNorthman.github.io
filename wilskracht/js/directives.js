@@ -3,15 +3,6 @@
 var app = angular.module('directives', ['controllers']);
 
 app.directive('navigationTabs', function($window) {
-    var link = function($scope, $element, $attrs){            
-        angular.element($window).bind("scroll", function (){
-            if (this.pageYOffset >= 150) {
-                $('.navbar').addClass("navbar-xs");
-            } else {
-                $('.navbar').removeClass("navbar-xs");
-            }         
-        });
-    }
     return {
         restrict: 'E',
         templateUrl: 'partials/navigation.html',
@@ -27,7 +18,28 @@ app.directive('navigationTabs', function($window) {
                 return this.tab === tabValue;
             };
         },
-        link: link,
+        link: function(scope, element) {
+            angular.element($window).bind("scroll", function() {
+                if (this.pageYOffset >= 150) {
+                    $('.navbar').addClass("navbar-xs");
+                } else {
+                    $('.navbar').removeClass("navbar-xs");
+                }
+            });
+            angular.element($window).bind("click", function(e) {
+                var isClickedOutside = element
+                    .find(event.target)
+                    .length > 0;
+
+                if (isClickedOutside) {
+                    return;
+                }
+
+                scope.$apply(function() {
+                    scope.tab.isCollapsed = true;
+                });
+            });
+        },
         controllerAs: 'tab'
     }
 });
@@ -54,13 +66,14 @@ app.directive('myMap', function() {
                 map = new google.maps.Map(element[0], mapOptions);
             }
         }
-        function setMarker(map){
-	        var markerOptions = {
-	            position: new google.maps.LatLng(52.024581, 4.316469),
-	            map: map,
-	            icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
-	        };
-        	marker = new google.maps.Marker(markerOptions);
+
+        function setMarker(map) {
+            var markerOptions = {
+                position: new google.maps.LatLng(52.024581, 4.316469),
+                map: map,
+                icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+            };
+            marker = new google.maps.Marker(markerOptions);
         }
         initMap();
         setMarker(map);

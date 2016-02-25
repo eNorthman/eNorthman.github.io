@@ -3,8 +3,8 @@
         <div class="row row-header">
           <div class="col-lg-4 logo">
             <a href="#home" ng-click="tab.setTab('home')">
-              <div class="col-lg-6 col-sm-2 col-xs-3">
-                <img class="img-responsive" src="img/logo2.png" alt="">    
+              <div class="col-lg-6 col-sm-2 col-xs-4">
+                <img class="img-responsive" src="img/logo2.png" alt="logo">    
               </div>  
               <div class="col-lg-6 col-sm-6 col-xs-6">
                 <h2>KinderCoaching</h2>
@@ -36,8 +36,8 @@
               <li ng-class="{'active' : tab.isSet('werkwijze')}">
                 <a href="#werkwijze" ng-click="tab.setTab('werkwijze')">Werkwijze</a>
               </li>
-              <li ng-class="{'active' : tab.isSet('')}">
-                <a href ng-click="tab.setTab(4)">Kosten</a>
+              <li ng-class="{'active' : tab.isSet('costs')}">
+                <a href="#costs" ng-click="tab.setTab('costs')">Kosten</a>
               </li>
               <li ng-class="{'active' : tab.isSet('contact')}">
                 <a href="#contact" ng-click="tab.setTab('contact')">Contact</a>

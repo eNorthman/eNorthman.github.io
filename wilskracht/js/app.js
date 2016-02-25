@@ -31,6 +31,11 @@ app.config(['$routeProvider',
         controller: 'mainController',
         activetab: 'wut'
       }).
+      when('/costs', {
+        templateUrl: 'partials/costs.html',
+        controller: 'mainController',
+        activetab: 'costs'
+      }).
       when('/contact', {
         templateUrl: 'partials/contact.html',
         controller: 'contactController',
