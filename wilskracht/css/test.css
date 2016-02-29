@@ -13,9 +13,9 @@
     .navbar-xs {
         position: fixed;
         top: 0px;
-        right: 3px;
-        width: 100%;
-        margin-top: 0px !important;
+        right: 0px;
+        left: 0px;
+        margin-top: 2px !important;
     }
 }
 
