@@ -66,6 +66,10 @@ body {
 
 .row-header {
     min-height: 125px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 #content_bg {
