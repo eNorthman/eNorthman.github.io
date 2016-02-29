@@ -4,7 +4,6 @@
             <div class="slide" ng-repeat="slide in slides" ng-hide="!isCurrentSlideIndex($index)">
                 <img ng-src="{{slide.image}}" />
                 <div class="description">{{slide.description}}</div>
-                <pre>{{slide.description | json}}</pre>
             </div>
             <nav class="nav">
                 <div class="wrapper">
