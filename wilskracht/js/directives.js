@@ -20,7 +20,7 @@ app.directive('navigationTabs', function($window) {
         },
         link: function(scope, element) {
             angular.element($window).bind("scroll", function() {
-                if (this.pageYOffset >= 140) {
+                if (this.pageYOffset >= 125) {
                     $('.navbar').addClass("navbar-xs");
                 } else {
                     $('.navbar').removeClass("navbar-xs");
