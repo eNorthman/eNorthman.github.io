@@ -91,11 +91,11 @@ body {
 
 .description {
     position: absolute;
-    left: 20px;
-    bottom: 60px;
+    left: 10px;
+    bottom: 10px;
     background: #6599FF;
     opacity: 0.6;
-    padding: 15px;
+    padding: 2px 5px 0px 5px;
     font-size: 28px;
     color: #fff;
 }
@@ -231,3 +231,6 @@ body {
     background: url('../img/grass.png') no-repeat center center scroll;
     background-position: 0% 100%;
 }*/
+.welcome-pic {
+    padding-top: 25px;
+}

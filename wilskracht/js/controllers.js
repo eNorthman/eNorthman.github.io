@@ -3,30 +3,22 @@
 var app = angular.module('controllers', ['ngAnimate']);
 // create the controller and inject Angular's $scope
 
-var news = [{
-    title: 'beunhaas',
-    text: 'hallo ik ben een beunhaas'
-}, {
-    title: 'beunhaas',
-    text: 'hallo ik ben een beunhaas'
-}];
-
 app.controller('mainController', function($scope, $interval) {
     // create a message to display in our view
     $scope.message = 'Everyone come and see how good I look!';
 
     $scope.slides = [{
-        image: 'http://lorempixel.com/1000/300/sports',
-        description: 'Wij zijn de beste'
+        image: '/img/praktijk.png',
+        description: 'De praktijk'
     }, {
-        image: 'http://lorempixel.com/1000/300/food',
-        description: 'Kinderen weer kind'
+        image: '/img/img2.png',
+        description: 'ontdekken van hun eigen kwaliteiten'
     }, {
-        image: 'http://lorempixel.com/1000/300/sports',
-        description: 'problem solved'
+        image: '/img/img3.png',
+        description: 'begeleiden van kinderen'
     }, {
-        image: 'http://lorempixel.com/1000/300/people',
-        description: 'waaaaauwww'
+        image: '/img/img4.png',
+        description: 'kracht in zichzelf'
     }];
 
     $scope.callAtInterval = function() {
@@ -56,8 +48,6 @@ app.controller('mainController', function($scope, $interval) {
     $scope.isCurrentSlideIndex = function(index) {
         return $scope.currentIndex === index;
     };
-
-    $scope.news = news;
 
 });
 
