@@ -26,18 +26,18 @@ if ( ! empty($errors)) {
 
   // if there are no errors, return a message
   $data['success'] = true;
-  $data['messageSuccess'] = 'Success!';
+  $data['messageSuccess'] = 'Uw mail is succesvol verzonden, wij zullen zo snel mogelijk contact met u opnemen.';
   $email_subject = 'wilskracht';
   $email_to = 'eric_vd_helm@hotmail.com';
   $name = $_POST['name']; // required
   $email_from = $_POST['email']; // required
   $message = $_POST['comment']; // required
-  $email_message = "Form details below.nn";
-  $email_message .= "Name: ".$name."n";
-  $email_message .= "Email: ".$email_from."n";
-  $email_message .= "Message: ".$message."n";
-  $headers = 'From: '.$email_from."rn".
-  'Reply-To: '.$email_from."rn" .
+  $email_message = "Form details below.\n\n";
+  $email_message .= "Name: ".$name."\n";
+  $email_message .= "Email: ".$email_from."\n";
+  $email_message .= "Message: ".$message."\n";
+  $headers = 'From: '.$email_from."\r\n".
+  'Reply-To: '.$email_from."\r\n" .
   'X-Mailer: PHP/' . phpversion();
   @mail($email_to, $email_subject, $email_message, $headers);
 }
