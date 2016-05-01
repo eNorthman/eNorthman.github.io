@@ -18,22 +18,22 @@ app.config(['$routeProvider',
       }).
       when('/about', {
         templateUrl: 'partials/about.html',
-        controller: 'mainController',
+        controller: 'contactController',
         activetab: 'about'
       }).
       when('/werkwijze', {
         templateUrl: 'partials/werkwijze.html',
-        controller: 'mainController',
+        controller: 'contactController',
         activetab: 'werkwijze'
       }).
         when('/wut', {
         templateUrl: 'partials/wut.html',
-        controller: 'mainController',
+        controller: 'contactController',
         activetab: 'wut'
       }).
       when('/costs', {
         templateUrl: 'partials/costs.html',
-        controller: 'mainController',
+        controller: 'contactController',
         activetab: 'costs'
       }).
       when('/contact', {
