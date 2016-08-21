@@ -2,9 +2,9 @@
     <div class="container">
         <div class="col-md-7 welcome-container">
             <div>
-                <h3>Neem hier contact met ons op</h3>
+                <h1>Neem hier contact met ons op</h1>
                 <p>Indien u vragen heeft over kindercoaching, vragen wij u het onderstaande formulier te gebruiken.</p>
-                <form name="submitform" ng-submit="submitForm(submitform.$valid)" novalidate ng-hide="submission">
+                <form name="submitform" ng-submit="submitForm(submitform.$valid)" novalidate>
                     <!-- NAME -->
                     <div class="form-group" ng-class="{ 'has-error' : submitform.name.$invalid && submitted}">
                         <label for="name">Uw Naam:</label>
@@ -24,25 +24,18 @@
                         <p ng-show="submitform.comment.$invalid && submitted" class="help-block">Vul aub een tekst in</p>
                     </div>
                     <button type="submit" value="Send" class="btn btn-primary">Verzenden</button>
+                    <div ng-class="{'submissionMessage' : submission}" ng-bind="submissionMessage"></div>
                 </form>
-            </div>
-            <div ng-show="submission">
-                <div ng-class="{'submissionMessage' : submission}" ng-bind="submissionMessage">
-                </div>
-                <div ng-class="{'submissionMessage' : submission}">
-                Klik <a href="" ng-click="submission = false">hier</a> om terug te keren naar het formulier
-                </div>
             </div>
         </div>
         <div class="col-md-5 contact-container">
-            <h3>Contact Gegevens</h3>
+            <h1>Contact Gegevens</h1>
             <my-map></my-map>
             <ul class="contactList">
                 <li><p><strong>Adres</strong>Goedendorplaan 52</p></li>
                 <li><p><strong></strong>2286 MX</p></li>
                 <li><p><strong></strong>Rijswijk</p></li>
-                <li><p><strong>Email</strong>Email@Email.nl</p></li>
-                <li><p><strong>Telefoon</strong>0612345678</p></li>
+                <li><p><strong>Email</strong>doorwilskracht@ziggo.nl</p></li>
             </ul>
         </div>
     </div>

@@ -5,7 +5,6 @@ var app = angular.module('controllers', ['ngAnimate']);
 
 app.controller('mainController', function($scope, $interval) {
     // create a message to display in our view
-    $scope.message = 'Everyone come and see how good I look!';
 
     $scope.slides = [{
         image: '/img/praktijk.png',
@@ -22,7 +21,6 @@ app.controller('mainController', function($scope, $interval) {
     }];
 
     $scope.callAtInterval = function() {
-        console.log("$scope.callAtInterval - Interval occurred");
         if ($scope.currentIndex < $scope.slides.length - 1) {
             $scope.currentIndex = $scope.currentIndex + 1;
         } else {
