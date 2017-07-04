@@ -2,11 +2,15 @@
     border: none!important;
     padding: 0!important;
 }
+
+h1,.h1 {
+    font-size:24px!important;
+}
 .navbar {
     z-index: 99;
     background-color: #6599FF;
     border: 1px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-right: -3px;
     border-color: black;
 }
@@ -43,7 +47,32 @@ body {
 #headerwrap {
     height: 230px;
 }
-
+.nounderline{text-decoration: none!important}
+.grass{
+    z-index: 99;
+    position: relative;
+}
+.grass-img {
+    height: auto;
+}
+@media (min-width: 1200px) {
+    .grass-img {
+    max-width: 792px;
+    width: 792px; 
+}
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .grass-img {
+    max-width: 762px;
+    width: 762px;
+}
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .grass-img {
+    max-width: 750px;
+    width: 750px; 
+}
+}
 .collapse {
     display: none;
 }
